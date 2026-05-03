@@ -23,7 +23,6 @@ async function getDodgersData() {
       d.games.forEach(g => games.push(g));
     });
 
-    // LIVE
     const liveGame = games.find(g =>
       g.status.abstractGameState === "Live" ||
       g.status.abstractGameState === "In Progress"

@@ -183,8 +183,6 @@ footer {
     font-size: 24px;
 }
 
-
-
 .current-match {
     background-color: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(6px);
@@ -538,4 +536,339 @@ footer {
 .mlb-official-image {
     width: 96px;
     height: 96px;
+}
+
+.team-form-widget {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(6px);
+    color: whitesmoke;
+
+    border-radius: 32px;
+
+    width: 72%;
+    margin: 0 auto;
+
+    font-family: "Signika", Arial, sans-serif;
+    text-align: center;
+
+    box-shadow: 0 0 12px rgba(0,0,0,0.6);
+
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.team-form-widget h2 {
+    font-family: "Bungee", Arial, sans-serif;
+    font-size: 20px;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+}
+
+.form-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.form-circle {
+    width: 44px;
+    height: 44px;
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.4),0 0 6px rgba(0,0,0,0.25);
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-circle:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.form-circle.win {
+    background: linear-gradient(135deg, #2ecc71, #27ae60);
+}
+
+.form-circle.loss {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+}
+
+.form-circle.draw {
+    background: linear-gradient(135deg, #f1c40f, #d4ac0d);
+}
+
+.form-circle img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+    filter: drop-shadow(0 1px 2px rgba(0,0,0,0.5));
+}
+
+.mlb-table-widget {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(6px);
+    color: whitesmoke;
+
+    border-radius: 32px;
+
+    width: 72%;
+    margin: 0 auto;
+
+    font-family: "Signika", Arial, sans-serif;
+    text-align: center;
+
+    box-shadow: 0 0 12px rgba(0,0,0,0.6);
+
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.table-header {
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.table-header h2 {
+    font-family: "Bungee", Arial, sans-serif;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.table-filters {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.table-filters button {
+    background: rgba(255,255,255,0.1);
+    border: none;
+    color: whitesmoke;
+
+    padding: 6px 10px;
+    border-radius: 10px;
+
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.table-filters button:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+/* ===== TABLES ===== */
+
+.division-block {
+    margin-top: 16px;
+}
+
+.division-block h3 {
+    text-align: center;
+    margin-bottom: 8px;
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+thead {
+    background: rgba(255,255,255,0.08);
+}
+
+th, td {
+    padding: 6px 8px;
+    text-align: center;
+}
+
+.team-name {
+    text-align: left;
+}
+
+tbody tr {
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+tbody tr:hover {
+    background: rgba(255,255,255,0.06);
+}
+
+.team-name {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.team-icon {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+}
+
+.dodgers-row {
+    background: rgba(29, 66, 138, 0.25);
+    font-weight: bold;
+    box-shadow: inset 0 0 10px rgba(29, 66, 138, 0.4);
+}
+
+@media (max-width: 600px) {
+    header {
+        height: 40vh;
+    }
+
+    .stop {
+        height: 40vh;
+        padding-top: 26vh;
+    }
+
+    .topbar {
+        width: 95%;
+        gap: 12px;
+        height: auto;
+        border-radius: 20px;
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        width: 56px;
+        height: 56px;
+        border-radius: 16px;
+        margin: 8px;
+        padding: 6px;
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+
+    .past-matches .grid {
+        width: 95%;
+        grid-template-columns: 1fr;
+    }
+
+    .right {
+        flex-direction: column;
+    }
+
+    .current-match {
+        width: 95%;
+    }
+
+    .current-teams-row {
+        flex-direction: row;
+        gap: 8px;
+        padding: 0 8px;
+    }
+
+    .current-team {
+        min-width: 90px;
+        flex-direction: column;
+        gap: 4px;
+        font-size: 13px;
+    }
+
+    .current-team img {
+        width: 64px;
+        height: 64px;
+    }
+
+    #older-matches {
+        width: 95%;
+    }
+
+    .match-pill {
+        flex-wrap: wrap;
+        gap: 6px;
+        border-radius: 16px;
+        padding: 10px;
+    }
+
+    .pill-date {
+        font-size: 12px;
+    }
+
+    .btn-toggle {
+        width: 140px;
+        font-size: 13px;
+        padding: 8px 10px;
+    }
+
+    .team-form-widget {
+        width: 95%;
+    }
+
+    .form-circle {
+        width: 36px;
+        height: 36px;
+    }
+
+    .form-circle img {
+        width: 18px;
+        height: 18px;
+    }
+
+    .mlb-table-widget {
+        width: 95%;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    th, td {
+        padding: 4px 4px;
+    }
+
+    .team-icon {
+        width: 14px;
+        height: 14px;
+    }
+
+    .table-filters button {
+        padding: 5px 7px;
+        font-size: 12px;
+    }
+
+    .mlb-links {
+        width: 95%;
+        flex-direction: column;
+    }
+
+    .mlb-official-image {
+        width: 64px;
+        height: 64px;
+    }
+
+    .controls button {
+        width: 140px;
+        font-size: 13px;
+    }
+
+    footer {
+        font-size: 13px;
+        padding: 16px 0;
+    }
+
+    .info-popup {
+        top: 10px;
+        right: 10px;
+        left: 10px;
+    }
+
+    .info-content {
+        max-width: 100%;
+        font-size: 13px;
+    }
 }

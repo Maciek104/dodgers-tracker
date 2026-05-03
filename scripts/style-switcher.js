@@ -8,8 +8,8 @@ class StyleSwitcher {
     };
 
     this.icons = {
-      dark: "assets/icons/dark-theme.svg",
-      light: "assets/icons/light-theme.svg"
+      dark: "assets/icons/light-theme.svg",
+      light: "assets/icons/dark-theme.svg"
     };
 
     this.currentTheme = "dark";

@@ -1,0 +1,710 @@
+@font-face {
+    font-family: "Bungee";
+    src: url(../assets/fonts/Bungee-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Signika";
+    src: url(../assets/fonts/Signika-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f0f2f5;
+    color: #1a1a2e;
+    font-family: "Signika", Arial, sans-serif;
+}
+
+header {
+    width: 100%;
+    height: 50vh;
+    background-image: url("../assets/images/header-bg.jpg");
+    background-position: center;
+    z-index: 1;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.stop {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 50vh;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding-top: 36vh;
+    z-index: 2;
+}
+
+.gradient-bottom {
+    width: 100%;
+    height: 15vh;
+    background: linear-gradient(rgba(240, 242, 245, 0), rgba(240, 242, 245, 1));
+    z-index: 3;
+}
+
+.topbar {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    width: 72%;
+    height: 48px;
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(6px);
+    border: rgba(0, 0, 0, 0.15) 1px solid;
+    border-radius: 32px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    justify-items: center;
+    z-index: 3;
+}
+
+.logo {
+    display: flex;
+    width: 96px;
+    height: 96px;
+    border-radius: 32px;
+    padding: 8px;
+    margin-left: 36px;
+    align-items: center;
+    justify-items: center;
+    background-color: #ffffff;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
+    z-index: 4;
+}
+
+h1 {
+    font-family: "Bungee", "Arial", sans-serif;
+    color: #1a1a2e;
+}
+
+.past-matches .grid,
+#older-matches,
+.mlb-links,
+.current-match,
+.team-form-widget,
+.mlb-table-widget {
+    width: 72%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.game,
+.current-match,
+.team-form-widget,
+.mlb-table-widget {
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(6px);
+    color: #1a1a2e;
+    border-radius: 32px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+
+.current-match h2,
+.team-form-widget h2,
+.table-header h2 {
+    font-family: "Bungee", Arial, sans-serif;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.btn-toggle,
+.controls button {
+    padding: 10px 14px;
+    width: 192px;
+    font-family: "Signika", Arial, sans-serif;
+    border-radius: 999px;
+    background: rgba(0, 0, 0, 0.06);
+    color: #1a1a2e;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+    transition: background 0.2s, transform 0.3s ease;
+    white-space: nowrap;
+}
+
+.btn-toggle:hover,
+.controls button:hover {
+    background: rgba(0, 0, 0, 0.12);
+    transform: scale(1.03);
+}
+
+.past-matches .grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 12px;
+    margin-top: 12px;
+    text-align: center;
+    align-items: stretch;
+}
+
+.left {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.game {
+    padding: 12px;
+}
+
+.teams-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.team,
+.pill-left,
+.pill-right {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.team img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+
+.game.big {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.game.big .team img {
+    width: 48px;
+    height: 48px;
+}
+
+.score {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.game.big .score {
+    font-size: 24px;
+}
+
+.current-match {
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.current-teams-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 12px 0;
+    padding: 0 12px;
+}
+
+.current-team {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: auto;
+    min-width: 140px;
+    justify-content: center;
+}
+
+.current-team img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+.current-match .score {
+    font-size: 24px;
+    padding: 3px 6px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.06);
+}
+
+.current-match p {
+    margin-top: 6px;
+    color: #3a3a5c;
+}
+
+.countdown {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+#footer-control {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.older-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.top-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.match-pill {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(6px);
+    border-radius: 999px;
+    color: #1a1a2e;
+    transition: 0.2s;
+}
+
+.pill-left,
+.pill-right {
+    gap: 8px;
+}
+
+.match-pill img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+
+.pill-score {
+    font-weight: bold;
+    padding: 4px 10px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.07);
+}
+
+.pill-date {
+    opacity: 0.55;
+}
+
+.matches-list {
+    display: none;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.matches-list.open {
+    display: flex;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+}
+
+.info-popup {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+}
+
+.info-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(6px);
+    color: #1a1a2e;
+    font-size: 14px;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+    max-width: 320px;
+}
+
+.info-close {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-close img {
+    width: 16px;
+    height: 16px;
+    opacity: 0.5;
+}
+
+.info-close:hover img {
+    opacity: 0.8;
+}
+
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 999px;
+    background: rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.theme-toggle:hover {
+    background: rgba(0, 0, 0, 0.12);
+    transform: scale(1.05);
+}
+
+.theme-toggle img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    pointer-events: none;
+}
+
+.mlb-links {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    justify-content: space-between;
+}
+
+.mlb-links a {
+    flex: 1;
+    text-decoration: none;
+    color: inherit;
+}
+
+.mlb-site {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    border-radius: 32px;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(6px);
+    color: #1a1a2e;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.mlb-site:hover {
+    transform: scale(1.03);
+    background: rgba(255, 255, 255, 0.95);
+}
+
+.mlb-site:active {
+    transform: scale(0.97);
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.mlb-official-image {
+    width: 96px;
+    height: 96px;
+}
+
+.team-form-widget {
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.team-form-widget h2 {
+    letter-spacing: 1px;
+}
+
+.form-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.form-circle {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.06);
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1), 0 0 6px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-circle:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.form-circle.win  { background: linear-gradient(135deg, #2ecc71, #27ae60); }
+.form-circle.loss { background: linear-gradient(135deg, #e74c3c, #c0392b); }
+.form-circle.draw { background: linear-gradient(135deg, #f1c40f, #d4ac0d); }
+
+.form-circle img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.2));
+}
+
+/* ===== MLB TABLE WIDGET ===== */
+
+.mlb-table-widget {
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.table-header {
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.table-filters {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.table-filters button {
+    background: rgba(0, 0, 0, 0.06);
+    border: none;
+    color: #1a1a2e;
+    padding: 6px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.table-filters button:hover {
+    background: rgba(0, 0, 0, 0.12);
+}
+
+/* ===== TABLES ===== */
+
+.division-block {
+    margin-top: 16px;
+}
+
+.division-block h3 {
+    text-align: center;
+    margin-bottom: 8px;
+    font-size: 16px;
+    opacity: 0.7;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+thead {
+    background: rgba(0, 0, 0, 0.06);
+}
+
+th, td {
+    padding: 6px 8px;
+    text-align: center;
+}
+
+.team-name {
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+tbody tr {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+tbody tr:hover {
+    background: rgba(0, 0, 0, 0.04);
+}
+
+.team-icon {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+}
+
+.dodgers-row {
+    background: rgba(29, 66, 138, 0.1);
+    font-weight: bold;
+    box-shadow: inset 0 0 10px rgba(29, 66, 138, 0.15);
+}
+
+@media (max-width: 600px) {
+    header {
+        height: 40vh;
+    }
+
+    .stop {
+        height: 40vh;
+        padding-top: 26vh;
+    }
+
+    .topbar {
+        width: 95%;
+        gap: 12px;
+        height: auto;
+        border-radius: 20px;
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        width: 56px;
+        height: 56px;
+        border-radius: 16px;
+        margin: 8px;
+        padding: 6px;
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+
+    .past-matches .grid,
+    #older-matches,
+    .mlb-links,
+    .current-match,
+    .team-form-widget,
+    .mlb-table-widget {
+        width: 95%;
+    }
+
+    .past-matches .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .right {
+        flex-direction: column;
+    }
+
+    .current-teams-row {
+        flex-direction: row;
+        gap: 8px;
+        padding: 0 8px;
+    }
+
+    .current-team {
+        min-width: 90px;
+        flex-direction: column;
+        gap: 4px;
+        font-size: 13px;
+    }
+
+    .current-team img {
+        width: 36px;
+        height: 36px;
+    }
+
+    .match-pill {
+        flex-wrap: wrap;
+        gap: 6px;
+        border-radius: 16px;
+        padding: 10px;
+    }
+
+    .pill-date {
+        font-size: 12px;
+    }
+
+    .btn-toggle,
+    .controls button {
+        width: 140px;
+        font-size: 13px;
+        padding: 8px 10px;
+    }
+
+    .form-circle {
+        width: 36px;
+        height: 36px;
+    }
+
+    .form-circle img {
+        width: 18px;
+        height: 18px;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    th, td {
+        padding: 4px 4px;
+    }
+
+    .team-icon {
+        width: 14px;
+        height: 14px;
+    }
+
+    .table-filters button {
+        padding: 5px 7px;
+        font-size: 12px;
+    }
+
+    .mlb-links {
+        flex-direction: column;
+    }
+
+    .mlb-official-image {
+        width: 64px;
+        height: 64px;
+    }
+
+    footer {
+        font-size: 13px;
+        padding: 16px 0;
+    }
+
+    .info-popup {
+        top: 10px;
+        right: 10px;
+        left: 10px;
+    }
+
+    .info-content {
+        max-width: 100%;
+        font-size: 13px;
+    }
+}
