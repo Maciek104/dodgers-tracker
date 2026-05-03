@@ -103,7 +103,7 @@ function createTable(records) {
 
   container.innerHTML = `
     <div class="table-header">
-      <h2>MLB STANDINGS</h2>
+      <h2>TABELE WYNIKÓW MLB</h2>
 
       <div class="table-filters">
         <button data-group="league">MLB</button>

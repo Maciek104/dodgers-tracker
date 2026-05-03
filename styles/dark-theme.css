@@ -665,8 +665,6 @@ footer {
     background: rgba(255,255,255,0.2);
 }
 
-/* ===== TABLES ===== */
-
 .division-block {
     margin-top: 16px;
 }
@@ -721,6 +719,130 @@ tbody tr:hover {
     background: rgba(29, 66, 138, 0.25);
     font-weight: bold;
     box-shadow: inset 0 0 10px rgba(29, 66, 138, 0.4);
+}
+
+.our-goats {
+    display: flex;
+    flex-direction: column;
+
+    background: rgba(255,255,255,0.1);
+
+    width: 72%;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    font-family: "Signika", "Arial", sans-serif;
+
+    text-align: center;
+    align-items: stretch;
+
+    margin-top: 12px;
+    gap: 12px;
+
+    border-radius: 32px;
+}
+
+.our-goats h2 {
+    margin-top: 12px;
+}
+
+.our-goats > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.goat-image {
+    width: 50vh;
+    object-fit: contain;
+    filter: drop-shadow(0 0 12px black);
+}
+
+.goat-image.right {
+    align-self: flex-end;
+}
+
+.goat-image.left {
+    align-self: flex-start;
+}
+
+.goat-description {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 32px;
+    padding: 12px;
+    margin-left: 12px;
+    margin-right: 12px;
+    margin-bottom: 12px;
+    box-shadow: 0 0 12px black;
+}
+
+.widget-title {
+    margin-top: 12px;
+    font-family: "Bungee", Arial, sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+
+.future-matches {
+    width: 72%;
+    font-family: "Signika", "Arial", sans-serif;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.widget-title {
+    margin-bottom: 12px;
+    color: white;
+}
+
+.matches-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.future-matches .game {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(6px);    
+    color: whitesmoke;
+    padding: 12px;
+    border-radius: 32px;
+}
+
+.future-matches .teams-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.future-matches .team {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.future-matches .team img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+
+.vs {
+    font-weight: bold;
+    font-size: 16px;
+    opacity: 0.8;
+}
+
+.date {
+    margin-top: 6px;
+    font-size: 14px;
+    opacity: 0.85;
+}
+
+.venue {
+    font-size: 13px;
+    opacity: 0.7;
 }
 
 @media (max-width: 600px) {
@@ -871,4 +993,56 @@ tbody tr:hover {
         max-width: 100%;
         font-size: 13px;
     }
+
+    .our-goats {
+        width: 95%;
+        gap: 8px;
+    }
+
+    .goat-image {
+        width: 100%;
+    }
+
+    .goat-image.right,
+    .goat-image.left {
+        align-self: center;
+    }
+
+    .goat-description {
+        margin-left: 8px;
+        margin-right: 8px;
+        margin-bottom: 8px;
+        font-size: 13px;
+    }
+
+    .future-matches {
+        width: 95%;
+    }
+
+    .future-matches .game {
+        padding: 10px;
+    }
+
+    .future-matches .teams-row {
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+
+    .future-matches .team img {
+        width: 22px;
+        height: 22px;
+    }
+
+    .vs {
+        font-size: 14px;
+    }
+
+    .date {
+        font-size: 12px;
+    }
+
+    .venue {
+        font-size: 11px;
+    }
+
 }

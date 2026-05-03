@@ -86,6 +86,7 @@ function createPastMatchesGrid(games) {
   const otherGames = games.slice(1);
 
   container.innerHTML = `
+    <h2 class="widget-title">OSTATNIE MECZE</h2>
     <div class="grid">
       <div class="left">
         ${formatGame(mainGame, true)}
