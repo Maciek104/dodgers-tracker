@@ -8,159 +8,116 @@
     src: url(../assets/fonts/Signika-Regular.ttf);
 }
 
-* {
-    margin: 0;
-    padding: 0;
-}
+* { margin: 0; padding: 0; }
 
 body {
     background-color: black;
     color: white;
+    font-family: "Signika", Arial, sans-serif;
 }
 
 header {
     width: 100%;
     height: 50vh;
-
     background-image: url("../assets/images/header-bg.jpg");
     background-position: center;
-
     z-index: 1;
-}
-
-main {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-
-    margin-top: 12px;
 }
 
 .stop {
     display: flex;
     flex-direction: column;
-
     width: 100%;
     height: 50vh;
-
-    background-color: rgba(0, 0, 0, 0.3);
-
+    background-color: rgba(0,0,0,0.3);
     padding-top: 36vh;
-
     z-index: 2;
 }
 
 .gradient-bottom {
     width: 100%;
     height: 15vh;
-    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+    background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1));
     z-index: 3;
 }
 
 .topbar {
     display: flex;
-    flex-direction: row;
     gap: 24px;
-
     width: 72%;
     height: 48px;
-
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(255,255,255,0.3);
     backdrop-filter: blur(6px);
-    border: white 1px solid;
+    border: 1px solid white;
     border-radius: 32px;
-
-    margin-left: auto;
-    margin-right: auto;
-
+    margin: 0 auto;
     align-items: center;
-    justify-items: center;
-
     z-index: 3;
 }
 
 .logo {
     display: flex;
-
     width: 96px;
     height: 96px;
-
     border-radius: 32px;
-
     padding: 8px;
     margin-left: 36px;
     align-items: center;
-    justify-items: center;
-
     background-color: whitesmoke;
     box-shadow: 0 0 12px black;
-
     z-index: 4;
 }
 
 h1 {
-    font-family: "Bungee", "Arial", sans-serif;
+    font-family: "Bungee", Arial, sans-serif;
     color: white;
 }
 
-footer {
-    width: 64vh;
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 12px;
 }
 
 .past-matches .grid {
     display: grid;
     grid-template-columns: 2fr 1fr;
-
     gap: 12px;
-    width: 72%;
     margin-top: 12px;
-
-    margin-left: auto;
-    margin-right: auto;
-
-    font-family: "Signika", "Arial", sans-serif;
-
     text-align: center;
     align-items: stretch;
 }
 
-.left {
-    display: flex;
-    height: 100%;
-    width: 100%;
+.left { display: flex; height: 100%; width: 100%; }
+.right { display: flex; flex-direction: column; gap: 12px; }
+
+.past-matches .grid,
+#older-matches,
+.mlb-links,
+.current-match,
+.team-form-widget,
+.mlb-table-widget,
+.future-matches,
+.our-goats {
+    width: 72%;
+    margin: 0 auto;
 }
 
-.right {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.game {
-    background-color: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(6px);    
+.game,
+.match-pill,
+.mlb-site,
+.current-match,
+.team-form-widget,
+.mlb-table-widget {
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(6px);
     color: whitesmoke;
-    padding: 12px;
     border-radius: 32px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.6);
 }
 
-.teams-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.team {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-}
-
-.team img {
-    width: 28px;
-    height: 28px;
-    object-fit: contain;
-}
+.game { padding: 12px; }
 
 .game.big {
     width: 100%;
@@ -169,40 +126,37 @@ footer {
     justify-content: center;
 }
 
-.game.big .team img {
-    width: 48px;
-    height: 48px;
+.game.big .team img { width: 48px; height: 48px; }
+.game.big .score { font-size: 24px; }
+
+.teams-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.score {
-    font-weight: bold;
-    font-size: 18px;
+.team,
+.pill-left,
+.pill-right,
+.current-team {
+    display: flex;
+    align-items: center;
+    gap: 6px;
 }
 
-.game.big .score {
-    font-size: 24px;
-}
+.team img,
+.match-pill img { width: 28px; height: 28px; object-fit: contain; }
+
+.score { font-weight: bold; font-size: 18px; }
 
 .current-match {
-    background-color: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(6px);
-    color: whitesmoke;
-
-    border-radius: 32px;
-
-    width: 72%;
-    margin: 0 auto;
-
-    font-family: "Signika", Arial, sans-serif;
     text-align: center;
-
-    box-shadow: 0 0 12px rgba(0,0,0,0.6);
-
-    padding-top: 12px;
-    padding-bottom: 12px;
+    padding: 12px 0;
 }
 
-.current-match h2 {
+.current-match h2,
+.team-form-widget h2,
+.table-header h2 {
     font-family: "Bungee", Arial, sans-serif;
     font-size: 20px;
     margin-bottom: 12px;
@@ -212,648 +166,249 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     margin: 12px 0;
     padding: 0 12px;
 }
 
-.current-team {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-
-    height: auto;
-    min-width: 140px;
-
-    justify-content: center;
-}
-
-.current-team img {
-    width: 48px;
-    height: 48px;
-    object-fit: contain;
-}
+.current-team { min-width: 140px; justify-content: center; }
+.current-team img { width: 48px; height: 48px; object-fit: contain; }
 
 .current-match .score {
-    font-weight: bold;
     font-size: 24px;
-
     padding: 3px 6px;
     border-radius: 8px;
-
     background: rgba(255,255,255,0.08);
 }
 
-.current-match p {
-    margin-top: 6px;
-    color: whitesmoke;
-}
+.current-match p { margin-top: 6px; color: whitesmoke; }
+.countdown { font-size: 18px; font-weight: bold; margin-top: 8px; }
 
-.countdown {
-    font-size: 18px;
-    font-weight: bold;
-    margin-top: 8px;
-}
+.older-container { display: flex; flex-direction: column; gap: 12px; }
 
-footer {
-    width: 100%;
-    font-family: "Signika", Arial, sans-serif;
-    text-align: center;
-    padding-top: 24px;
-    padding-bottom: 24px;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-    text-align: center;
-}
-
-#older-matches {
-    width: 72%;
-    font-family: "Signika", Arial, sans-serif;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.older-container {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.top-row {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
+.top-row { display: flex; align-items: center; gap: 12px; }
 
 .match-pill {
     flex: 1;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     padding: 12px;
-
-    background: rgba(255,255,255, 0.1);
-    backdrop-filter: blur(6px);
-
     border-radius: 999px;
-
     color: white;
-
     transition: 0.2s;
 }
 
 .pill-left,
-.pill-right {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.match-pill img {
-    width: 28px;
-    height: 28px;
-    object-fit: contain;
-}
+.pill-right { gap: 8px; }
 
 .pill-score {
     font-weight: bold;
-
     padding: 4px 10px;
-
     border-radius: 8px;
     background: rgba(0,0,0,0.3);
 }
 
-.pill-date {
-    opacity: 0.7;
-}
+.pill-date { opacity: 0.7; }
 
-.btn-toggle {
-    padding: 10px 14px;
-    width: 192px;
+.matches-list { display: none; flex-direction: column; gap: 12px; }
+.matches-list.open { display: flex; }
 
+.controls { display: flex; justify-content: center; }
+
+.btn-toggle,
+.controls button,
+.table-filters button {
     font-family: "Signika", Arial, sans-serif;
-
-    border-radius: 999px;
-
     background: rgba(255,255,255,0.1);
     color: white;
-
     border: 1px solid rgba(255,255,255,0.2);
-
+    border-radius: 999px;
     cursor: pointer;
-    transition: 0.2s;
-
-    white-space: nowrap;
-
-    transition: scale() 0.3s ease;
+    transition: background 0.2s, transform 0.3s ease;
 }
 
-.btn-toggle:hover {
-    background: rgba(255,255,255,0.2);
-    transform: scale(1.03);
-}
-
-.matches-list {
-    display: none;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.matches-list.open {
-    display: flex;
-}
-
-.controls {
-    display: flex;
-    justify-content: center;
-}
-
+.btn-toggle,
 .controls button {
     padding: 10px 14px;
     width: 192px;
-
-    font-family: "Signika", Arial, sans-serif;
-
-    border-radius: 999px;
-
-    background: rgba(255,255,255,0.1);
-    color: white;
-
-    border: 1px solid rgba(255,255,255,0.2);
-
-    cursor: pointer;
-    transition: scale() 0.3s ease;
+    white-space: nowrap;
 }
 
-.controls button:hover {
+.table-filters button {
+    padding: 6px 10px;
+    border-radius: 10px;
+    border: none;
+}
+
+.btn-toggle:hover,
+.controls button:hover,
+.table-filters button:hover {
     background: rgba(255,255,255,0.2);
     transform: scale(1.03);
-}
-
-.info-popup {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-
-    z-index: 9999;
-}
-
-.info-content {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-
-    font-family: "Signika", Arial, sans-serif;
-
-    padding: 12px;
-
-    background: rgba(0,0,0,0.6);
-    backdrop-filter: blur(6px);
-
-    color: white;
-    font-size: 14px;
-
-    border-radius: 12px;
-    border: 1px solid rgba(255,255,255,0.15);
-
-    box-shadow: 0 0 12px rgba(0,0,0,0.6);
-
-    max-width: 320px;
-}
-
-.info-close {
-    background: none;
-    border: none;
-    cursor: pointer;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.info-close img {
-    width: 16px;
-    height: 16px;
-    opacity: 0.7;
-}
-
-.info-close:hover img {
-    opacity: 1;
 }
 
 .theme-toggle {
     display: flex;
     align-items: center;
     justify-content: center;
-
     width: 42px;
     height: 42px;
-
     border-radius: 999px;
-
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
     cursor: pointer;
-
     transition: 0.2s ease;
 }
 
-.theme-toggle:hover {
-    background: rgba(255, 255, 255, 0.15);
-    transform: scale(1.05);
-}
+.theme-toggle:hover { background: rgba(255,255,255,0.15); transform: scale(1.05); }
+.theme-toggle img { width: 20px; height: 20px; object-fit: contain; pointer-events: none; }
 
-.theme-toggle img {
-    width: 20px;
-    height: 20px;
+.info-popup { position: fixed; top: 20px; right: 20px; z-index: 9999; }
 
-    object-fit: contain;
-
-    pointer-events: none;
-}
-
-#footer-control {
-    width: 100%;
-    justify-content: center;
+.info-content {
+    display: flex;
     align-items: center;
-    display: flex;
-    gap: 10px;
-}
-
-.mlb-links {
-    display: flex;
-    flex-direction: row;
     gap: 12px;
-    width: 72%;
-    margin-left: auto;
-    margin-right: auto;
-    justify-content: space-between;
+    padding: 12px;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(6px);
+    color: white;
+    font-size: 14px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.15);
+    box-shadow: 0 0 12px rgba(0,0,0,0.6);
+    max-width: 320px;
 }
 
-.mlb-links a {
-    flex: 1;
-    text-decoration: none;
-    color: inherit;
-}
+.info-close { background: none; border: none; cursor: pointer; display: flex; align-items: center; }
+.info-close img { width: 16px; height: 16px; opacity: 0.7; }
+.info-close:hover img { opacity: 1; }
+
+.mlb-links { display: flex; gap: 12px; justify-content: space-between; }
+.mlb-links a { flex: 1; text-decoration: none; color: inherit; }
 
 .mlb-site {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 12px;
-    border-radius: 32px;
-
-    font-family: "Signika", Arial, sans-serif;
-
     padding: 12px;
-
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(6px);
-
-    color: white;
-
     transition: transform 0.3s ease, background 0.3s ease;
 }
 
-.mlb-site:hover {
-    transform: scale(1.03);
-    background: rgba(255, 255, 255, 0.3);
-}
+.mlb-site:hover { transform: scale(1.03); background: rgba(255,255,255,0.3); }
+.mlb-site:active { transform: scale(0.97); background: rgba(255,255,255,0.5); }
+.mlb-official-image { width: 96px; height: 96px; }
 
-.mlb-site:active {
-    transform: scale(0.97);
-    background: rgba(255, 255, 255, 0.5);
-}
+.team-form-widget { text-align: center; padding: 12px 0; }
+.team-form-widget h2 { letter-spacing: 1px; }
 
-.mlb-official-image {
-    width: 96px;
-    height: 96px;
-}
-
-.team-form-widget {
-    background-color: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(6px);
-    color: whitesmoke;
-
-    border-radius: 32px;
-
-    width: 72%;
-    margin: 0 auto;
-
-    font-family: "Signika", Arial, sans-serif;
-    text-align: center;
-
-    box-shadow: 0 0 12px rgba(0,0,0,0.6);
-
-    padding-top: 12px;
-    padding-bottom: 12px;
-}
-
-.team-form-widget h2 {
-    font-family: "Bungee", Arial, sans-serif;
-    font-size: 20px;
-    margin-bottom: 12px;
-    letter-spacing: 1px;
-}
-
-.form-row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 12px;
-    flex-wrap: wrap;
-}
+.form-row { display: flex; justify-content: center; align-items: center; gap: 12px; flex-wrap: wrap; }
 
 .form-circle {
     width: 44px;
     height: 44px;
-
     border-radius: 50%;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
-    background: rgba(255, 255, 255, 0.08);
-
-    box-shadow: inset 0 0 6px rgba(0,0,0,0.4),0 0 6px rgba(0,0,0,0.25);
-
+    background: rgba(255,255,255,0.08);
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.4), 0 0 6px rgba(0,0,0,0.25);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.form-circle:hover {
-    transform: scale(1.08);
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
-}
+.form-circle:hover { transform: scale(1.08); box-shadow: 0 0 10px rgba(0,0,0,0.5); }
+.form-circle.win  { background: linear-gradient(135deg, #2ecc71, #27ae60); }
+.form-circle.loss { background: linear-gradient(135deg, #e74c3c, #c0392b); }
+.form-circle.draw { background: linear-gradient(135deg, #f1c40f, #d4ac0d); }
+.form-circle img { width: 22px; height: 22px; object-fit: contain; filter: drop-shadow(0 1px 2px rgba(0,0,0,0.5)); }
 
-.form-circle.win {
-    background: linear-gradient(135deg, #2ecc71, #27ae60);
-}
+.mlb-table-widget { text-align: center; padding: 12px 0; }
+.table-header { text-align: center; margin-bottom: 12px; }
+.table-filters { display: flex; justify-content: center; gap: 8px; }
+.division-block { margin-top: 16px; }
+.division-block h3 { text-align: center; margin-bottom: 8px; font-size: 16px; opacity: 0.9; }
 
-.form-circle.loss {
-    background: linear-gradient(135deg, #e74c3c, #c0392b);
-}
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+thead { background: rgba(255,255,255,0.08); }
+th, td { padding: 6px 8px; text-align: center; }
+tbody tr { border-bottom: 1px solid rgba(255,255,255,0.05); }
+tbody tr:hover { background: rgba(255,255,255,0.06); }
 
-.form-circle.draw {
-    background: linear-gradient(135deg, #f1c40f, #d4ac0d);
-}
-
-.form-circle img {
-    width: 22px;
-    height: 22px;
-    object-fit: contain;
-    filter: drop-shadow(0 1px 2px rgba(0,0,0,0.5));
-}
-
-.mlb-table-widget {
-    background-color: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(6px);
-    color: whitesmoke;
-
-    border-radius: 32px;
-
-    width: 72%;
-    margin: 0 auto;
-
-    font-family: "Signika", Arial, sans-serif;
-    text-align: center;
-
-    box-shadow: 0 0 12px rgba(0,0,0,0.6);
-
-    padding-top: 12px;
-    padding-bottom: 12px;
-}
-
-.table-header {
-    text-align: center;
-    margin-bottom: 12px;
-}
-
-.table-header h2 {
-    font-family: "Bungee", Arial, sans-serif;
-    font-size: 20px;
-    margin-bottom: 8px;
-}
-
-.table-filters {
-    display: flex;
-    justify-content: center;
-    gap: 8px;
-}
-
-.table-filters button {
-    background: rgba(255,255,255,0.1);
-    border: none;
-    color: whitesmoke;
-
-    padding: 6px 10px;
-    border-radius: 10px;
-
-    cursor: pointer;
-    transition: 0.2s;
-}
-
-.table-filters button:hover {
-    background: rgba(255,255,255,0.2);
-}
-
-.division-block {
-    margin-top: 16px;
-}
-
-.division-block h3 {
-    text-align: center;
-    margin-bottom: 8px;
-    font-size: 16px;
-    opacity: 0.9;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 14px;
-}
-
-thead {
-    background: rgba(255,255,255,0.08);
-}
-
-th, td {
-    padding: 6px 8px;
-    text-align: center;
-}
-
-.team-name {
-    text-align: left;
-}
-
-tbody tr {
-    border-bottom: 1px solid rgba(255,255,255,0.05);
-}
-
-tbody tr:hover {
-    background: rgba(255,255,255,0.06);
-}
-
-.team-name {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.team-icon {
-    width: 18px;
-    height: 18px;
-    object-fit: contain;
-}
+.team-name { text-align: left; display: flex; align-items: center; gap: 8px; }
+.team-icon { width: 18px; height: 18px; object-fit: contain; }
 
 .dodgers-row {
-    background: rgba(29, 66, 138, 0.25);
+    background: rgba(29,66,138,0.25);
     font-weight: bold;
-    box-shadow: inset 0 0 10px rgba(29, 66, 138, 0.4);
+    box-shadow: inset 0 0 10px rgba(29,66,138,0.4);
 }
 
 .our-goats {
     display: flex;
     flex-direction: column;
-
-    background: rgba(255,255,255,0.1);
-
-    width: 72%;
-
-    margin-left: auto;
-    margin-right: auto;
-
-    font-family: "Signika", "Arial", sans-serif;
-
     text-align: center;
     align-items: stretch;
-
     margin-top: 12px;
     gap: 12px;
-
     border-radius: 32px;
+    background: rgba(255,255,255,0.1);
 }
 
-.our-goats h2 {
-    margin-top: 12px;
-}
+.our-goats h2 { margin-top: 12px; }
+.our-goats > div { display: flex; flex-direction: column; }
 
-.our-goats > div {
-    display: flex;
-    flex-direction: column;
-}
-
-.goat-image {
-    width: 50vh;
-    object-fit: contain;
-    filter: drop-shadow(0 0 12px black);
-}
-
-.goat-image.right {
-    align-self: flex-end;
-}
-
-.goat-image.left {
-    align-self: flex-start;
-}
+.goat-image { width: 50vh; object-fit: contain; filter: drop-shadow(0 0 12px black); }
+.goat-image.right { align-self: flex-end; }
+.goat-image.left  { align-self: flex-start; }
 
 .goat-description {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255,255,255,0.1);
     border-radius: 32px;
     padding: 12px;
-    margin-left: 12px;
-    margin-right: 12px;
-    margin-bottom: 12px;
+    margin: 0 12px 12px;
     box-shadow: 0 0 12px black;
 }
 
+.future-matches { text-align: center; }
+
 .widget-title {
-    margin-top: 12px;
     font-family: "Bungee", Arial, sans-serif;
     font-size: 20px;
     text-align: center;
-}
-
-.future-matches {
-    width: 72%;
-    font-family: "Signika", "Arial", sans-serif;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.widget-title {
-    margin-bottom: 12px;
+    margin: 12px 0;
     color: white;
 }
 
-.matches-list {
+.future-matches .game { padding: 12px; }
+.future-matches .team img { width: 28px; height: 28px; object-fit: contain; }
+.future-matches .teams-row { flex-wrap: wrap; gap: 6px; }
+
+.vs { font-weight: bold; font-size: 16px; opacity: 0.8; }
+.date { margin-top: 6px; font-size: 14px; opacity: 0.85; }
+.venue { font-size: 13px; opacity: 0.7; }
+
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 24px 0;
     display: flex;
     flex-direction: column;
-    gap: 12px;
-}
-
-.future-matches .game {
-    background-color: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(6px);    
-    color: whitesmoke;
-    padding: 12px;
-    border-radius: 32px;
-}
-
-.future-matches .teams-row {
-    display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 8px;
 }
 
-.future-matches .team {
+#footer-control {
+    width: 100%;
     display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 6px;
-}
-
-.future-matches .team img {
-    width: 28px;
-    height: 28px;
-    object-fit: contain;
-}
-
-.vs {
-    font-weight: bold;
-    font-size: 16px;
-    opacity: 0.8;
-}
-
-.date {
-    margin-top: 6px;
-    font-size: 14px;
-    opacity: 0.85;
-}
-
-.venue {
-    font-size: 13px;
-    opacity: 0.7;
+    gap: 10px;
 }
 
 @media (max-width: 600px) {
-    header {
-        height: 40vh;
-    }
-
-    .stop {
-        height: 40vh;
-        padding-top: 26vh;
-    }
+    header, .stop { height: 40vh; }
+    .stop { padding-top: 26vh; }
 
     .topbar {
         width: 95%;
@@ -871,28 +426,20 @@ tbody tr:hover {
         padding: 6px;
     }
 
-    h1 {
-        font-size: 18px;
-    }
+    h1 { font-size: 18px; }
 
-    .past-matches .grid {
-        width: 95%;
-        grid-template-columns: 1fr;
-    }
+    .past-matches .grid,
+    #older-matches,
+    .mlb-links,
+    .current-match,
+    .team-form-widget,
+    .mlb-table-widget,
+    .future-matches,
+    .our-goats { width: 95%; }
 
-    .right {
-        flex-direction: column;
-    }
+    .past-matches .grid { grid-template-columns: 1fr; }
 
-    .current-match {
-        width: 95%;
-    }
-
-    .current-teams-row {
-        flex-direction: row;
-        gap: 8px;
-        padding: 0 8px;
-    }
+    .current-teams-row { padding: 0 8px; gap: 8px; }
 
     .current-team {
         min-width: 90px;
@@ -901,148 +448,38 @@ tbody tr:hover {
         font-size: 13px;
     }
 
-    .current-team img {
-        width: 64px;
-        height: 64px;
-    }
+    .current-team img { width: 64px; height: 64px; }
 
-    #older-matches {
-        width: 95%;
-    }
+    .match-pill { flex-wrap: wrap; gap: 6px; border-radius: 16px; padding: 10px; }
+    .pill-date { font-size: 12px; }
 
-    .match-pill {
-        flex-wrap: wrap;
-        gap: 6px;
-        border-radius: 16px;
-        padding: 10px;
-    }
+    .btn-toggle,
+    .controls button { width: 140px; font-size: 13px; padding: 8px 10px; }
 
-    .pill-date {
-        font-size: 12px;
-    }
+    .form-circle { width: 36px; height: 36px; }
+    .form-circle img { width: 18px; height: 18px; }
 
-    .btn-toggle {
-        width: 140px;
-        font-size: 13px;
-        padding: 8px 10px;
-    }
+    table { font-size: 12px; }
+    th, td { padding: 4px; }
+    .team-icon { width: 14px; height: 14px; }
+    .table-filters button { padding: 5px 7px; font-size: 12px; }
 
-    .team-form-widget {
-        width: 95%;
-    }
+    .mlb-links { flex-direction: column; }
+    .mlb-official-image { width: 64px; height: 64px; }
 
-    .form-circle {
-        width: 36px;
-        height: 36px;
-    }
+    footer { font-size: 13px; padding: 16px 0; }
 
-    .form-circle img {
-        width: 18px;
-        height: 18px;
-    }
+    .info-popup { top: 10px; right: 10px; left: 10px; }
+    .info-content { max-width: 100%; font-size: 13px; }
 
-    .mlb-table-widget {
-        width: 95%;
-    }
-
-    table {
-        font-size: 12px;
-    }
-
-    th, td {
-        padding: 4px 4px;
-    }
-
-    .team-icon {
-        width: 14px;
-        height: 14px;
-    }
-
-    .table-filters button {
-        padding: 5px 7px;
-        font-size: 12px;
-    }
-
-    .mlb-links {
-        width: 95%;
-        flex-direction: column;
-    }
-
-    .mlb-official-image {
-        width: 64px;
-        height: 64px;
-    }
-
-    .controls button {
-        width: 140px;
-        font-size: 13px;
-    }
-
-    footer {
-        font-size: 13px;
-        padding: 16px 0;
-    }
-
-    .info-popup {
-        top: 10px;
-        right: 10px;
-        left: 10px;
-    }
-
-    .info-content {
-        max-width: 100%;
-        font-size: 13px;
-    }
-
-    .our-goats {
-        width: 95%;
-        gap: 8px;
-    }
-
-    .goat-image {
-        width: 100%;
-    }
-
+    .goat-image { width: 100%; }
     .goat-image.right,
-    .goat-image.left {
-        align-self: center;
-    }
+    .goat-image.left { align-self: center; }
+    .goat-description { margin: 0 8px 8px; font-size: 13px; }
 
-    .goat-description {
-        margin-left: 8px;
-        margin-right: 8px;
-        margin-bottom: 8px;
-        font-size: 13px;
-    }
-
-    .future-matches {
-        width: 95%;
-    }
-
-    .future-matches .game {
-        padding: 10px;
-    }
-
-    .future-matches .teams-row {
-        flex-wrap: wrap;
-        gap: 6px;
-    }
-
-    .future-matches .team img {
-        width: 22px;
-        height: 22px;
-    }
-
-    .vs {
-        font-size: 14px;
-    }
-
-    .date {
-        font-size: 12px;
-    }
-
-    .venue {
-        font-size: 11px;
-    }
-
+    .future-matches .game { padding: 10px; }
+    .future-matches .team img { width: 22px; height: 22px; }
+    .vs { font-size: 14px; }
+    .date { font-size: 12px; }
+    .venue { font-size: 11px; }
 }
